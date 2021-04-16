@@ -5,6 +5,7 @@ import datetime # kurulu olan işletim sisteminden zaman bilgisini almak için
 import time # kurulu olan işletim sisteminden zaman bilgisini almak için
 import dns.resolver #ileride dns ve ip değiştirmek için kullanacağım bir kütüphane şuanda bu özellikler hazır değil
 
+os.system ("apt-get update")
 os.system ("apt-get install figlet") # güzel bir karşılama için figlet yüklüyorum
 os.system ("apt-get install tor") # tor network e bağlanabilmek için tor kuruyorum
 
