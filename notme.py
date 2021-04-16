@@ -6,7 +6,14 @@ import time # kurulu olan işletim sisteminden zaman bilgisini almak için
 import dns.resolver #ileride dns ve ip değiştirmek için kullanacağım bir kütüphane şuanda bu özellikler hazır değil
 
 os.system ("apt-get install figlet") # güzel bir karşılama için figlet yüklüyorum
-os.system ("clear")
+os.system ("apt-get install tor") # tor network e bağlanabilmek için tor kuruyorum
+
+os.system ("cd..")
+os.system ("cd..")
+os.system ("cd root")
+os.system ("cd Desktop")
+
+os.system ("clear") # kafa karıştırıcı olmaması ve sade gözükmesi açısından konsolu temizliyorum
 
 resolvString = 'nameserver 127.0.0.1' # şuan için işlevsel değil 
 
@@ -28,8 +35,8 @@ print(style.WHITE + "")
 
 print("1- Automatic MAC Changer (LAN)")
 print("2- Automatic MAC Changer (WIFI)")
-print(style.RED +"3- Automatic DNS Changer (DEACTIVATED)")   # kolaylık olması açısından bir kullanıcının seçim yapabileceği bir menü hazırladım
-print("4- Automatic Netmask Changer (DEACTIVATED)")
+print("3- Automatic Proxychain (Join tor network)")   # kolaylık olması açısından bir kullanıcının seçim yapabileceği bir menü hazırladım
+print(style.RED +"4- Automatic Netmask Changer (DEACTIVATED)")
 print("5- Automatic IP Changer (DEACTIVATED)")
 
 
@@ -80,14 +87,70 @@ if selectno=="2":
 		time.sleep(settime) # kullanıcının istediği süre ile delay koydum
 
 
+if selectno=="3":
+	
+	os.system("clear")
+	os.system ("figlet     PROXYchain")
+	print ("")
+	print ("")
+	print("1- Automatic setup proxychains.conf")
+	print("2- Open firefox with tor network")
+	
+	print("")
+	selectno = input ("Select = ") 
+	
+	if(selectno=="1"):
+	
+		os.system("clear")
+		os.system("service tor start")
+		os.system("service tor status")
+		print("")
+		print("")
+	
+		print("Configure your proxychains.conf")
+		time.sleep(4)
+	
+		os.system("rm /etc/proxychains.conf")
+	
+		os.system("cd ..")
+		os.system("cd ..")
+		os.system("cd root")
+		os.system("cd Desktop")
+		os.system("cd notMe")
+	
+		os.system("mv proxychains.conf /etc/")
+		os.system("clear")
+		
+		print(style.GREEN +"Configure DONE")
+		time.sleep(2)
+		
+		os.system("clear")
+		os.system("service tor restart")
+		time.sleep(4)
+		os.system("clear")
 
+		os.system("proxychains firefox www.google.com")
+
+	if(selectno=="2"):
+		
+		print("give me a sec")
+		os.system("clear")
+		os.system("service tor start")
+		os.system(style.GREEN +"service tor restart")
+		time.sleep(4)
+		os.system("clear")
+
+		os.system("proxychains firefox www.google.com")
+
+	else:
+		print(style.RED +"wrong number")
 
 else:  # eğer menüde hazır olmayan toollara gitmek istenirse hata mesajı ayarladım
 
 	print(style.RED + "")
 	print("this tool is not ready")
 	
-
+	
 		
 	
 	
