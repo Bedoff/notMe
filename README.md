@@ -1,5 +1,6 @@
 # notMe
-Automatic mac changer for linux
+I will make you a ghost
+
 
 İnstall
 
