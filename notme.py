@@ -7,7 +7,7 @@ import dns.resolver #ileride dns ve ip değiştirmek için kullanacağım bir k�
 
 os.system ("apt-get update")
 os.system ("apt-get install figlet") # güzel bir karşılama için figlet yüklüyorum
-os.system ("apt-get install tor") # tor network e bağlanabilmek için tor kuruyorum
+os.system ("apt-get install tor") # proxychain kullanabilmem için tor gerekli
 
 os.system ("cd..")
 os.system ("cd..")
@@ -36,7 +36,7 @@ print(style.WHITE + "")
 
 print("1- Automatic MAC Changer (LAN)")
 print("2- Automatic MAC Changer (WIFI)")
-print("3- Automatic Proxychain (Join tor network)")   # kolaylık olması açısından bir kullanıcının seçim yapabileceği bir menü hazırladım
+print("3- Automatic Proxychain (SOCKS5)")   # kolaylık olması açısından bir kullanıcının seçim yapabileceği bir menü hazırladım
 print(style.RED +"4- Automatic Netmask Changer (DEACTIVATED)")
 print("5- Automatic IP Changer (DEACTIVATED)")
 
@@ -96,7 +96,7 @@ if selectno=="3":
 	print ("")
 	print ("")
 	print("1- Automatic setup proxychains.conf") 
-	print("2- Open firefox with tor network")
+	print("2- Open firefox with proxychain ")
 	
 	print("")
 	selectno = input ("Select = ") # seçim yaptırtmak için tekrardan selectno değişkenini kullanıyorum
@@ -156,8 +156,6 @@ else:  # eğer menüde hazır olmayan toollara gitmek istenirse hata mesajı aya
 		
 	
 	
-
-
 
 
 
