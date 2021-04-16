@@ -5,14 +5,20 @@ Automatic mac changer for linux
 
 -------
 
-$ apt update
 
-$ apt upgrade
 
 $ apt install python
 
 $ apt install git
 
-$ apt install dnsutils
+$ cd Desktop
 
 $ git clone https://github.com/IS5416/notMe
+
+
+
+
+
+Not
+------
+Programın düzgün çalışması için mutlaka Masaüstüne kurulması gereklidir
