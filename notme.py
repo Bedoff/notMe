@@ -90,58 +90,59 @@ if selectno=="2":
 
 if selectno=="3":
 	
-	os.system("clear")
-	os.system ("figlet     PROXYchain")
+	os.system("clear") # temizlik açısından tekrardan bir konsol temizliği
+	os.system ("figlet     PROXYchain") # figlet ile proxychain ekranı oluşturdum
+	
 	print ("")
 	print ("")
-	print("1- Automatic setup proxychains.conf")
+	print("1- Automatic setup proxychains.conf") 
 	print("2- Open firefox with tor network")
 	
 	print("")
-	selectno = input ("Select = ") 
+	selectno = input ("Select = ") # seçim yaptırtmak için tekrardan selectno değişkenini kullanıyorum
 	
 	if(selectno=="1"):
 	
 		os.system("clear")
-		os.system("service tor start")
-		os.system("service tor status")
+		os.system("service tor start")  # tor servisini başlatıyorum
+		os.system("service tor status") # tor servisini açtığımı kullanıcıya belirtiyorum
 		print("")
 		print("")
 	
-		print("Configure your proxychains.conf")
+		print("Configure your proxychains.conf") 
 		time.sleep(4)
 	
-		os.system("rm /etc/proxychains.conf")
+		os.system("rm /etc/proxychains.conf") # tor un oluşturduğu proxychains.conf dosyasını siliyorum
 	
 		os.system("cd ..")
 		os.system("cd ..")
 		os.system("cd root")
 		os.system("cd Desktop")
-		os.system("cd notMe")
+		os.system("cd notMe")  
 	
-		os.system("mv proxychains.conf /etc/")
-		os.system("clear")
+		os.system("mv proxychains.conf /etc/") # daha öncesinden düzenlediğim ve github dan çektiğim proxychains.conf dosyasını notMe den /etc/ (ait olduğu yere) yolluyorum
+		os.system("clear") 
 		
 		print(style.GREEN +"Configure DONE")
 		time.sleep(2)
 		
 		os.system("clear")
-		os.system("service tor restart")
+		os.system("service tor restart") # tor servisini yeniden başlatıyorum
 		time.sleep(4)
 		os.system("clear")
 
-		os.system("proxychains firefox www.google.com")
+		os.system("proxychains firefox www.google.com") # firefox u proxychains ile başlatıp google.com a yolluyorum
 
-	if(selectno=="2"):
+	if(selectno=="2"): # eğer bir kere proxychains kurulumu yapıldıysa artık 2. seçenek kullanılarak daha optimize ve seri çalışılabilir
 		
 		print("give me a sec")
 		os.system("clear")
-		os.system("service tor start")
-		os.system(style.GREEN +"service tor restart")
+		os.system("service tor start") # her ihtimale karşı servisi yeniden başlatmayı deniyorum
+		os.system(style.GREEN +"service tor restart") # ardından bir bug olmaması açısından resetliyorum
 		time.sleep(4)
 		os.system("clear")
 
-		os.system("proxychains firefox www.google.com")
+		os.system("proxychains firefox www.google.com") # firefox u proxychains ile başlatıp google.com a yolluyorum
 
 	else:
 		print(style.RED +"wrong number")
