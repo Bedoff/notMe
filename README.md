@@ -23,5 +23,5 @@ $ git clone https://github.com/IS5416/notMe
 
 Not
 ------
-Programın düzgün çalışması için mutlaka Masaüstüne kurulması gereklidir
+Programın düzgün çalışması için mutlaka Masaüstüne kurulması gereklidir          
 şuan için pek işlevsel değil, okul projesidir
